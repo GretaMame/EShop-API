@@ -29,6 +29,8 @@ namespace eshopAPI.Models
         [ForeignKey("SubCategory")]
         public long SubCategoryID { get; set; }
         public SubCategory SubCategory { get; set; }
+        [Timestamp]
+        public byte[] Timestamp { get; set; }
 
         public virtual ICollection<AttributeValue> Attributes { get; set; }
         public virtual ICollection<ItemPicture> Pictures { get; set; }
